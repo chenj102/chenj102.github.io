@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://chenj102.github.io/2022/07/22/leetcode/</loc>
+    <loc>http://chenj102.github.io/2022/07/22/Leetcode/</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://chenj102.github.io/2022/07/22/leetcode%20-%20%E5%89%AF%E6%9C%AC/</loc>
     
     <lastmod>2022-07-22</lastmod>
     
