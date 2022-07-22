@@ -6,7 +6,7 @@
   <link href="http://chenj102.github.io/atom.xml" rel="self"/>
   
   <link href="http://chenj102.github.io/"/>
-  <updated>2022-07-22T09:28:06.090Z</updated>
+  <updated>2022-07-22T12:53:53.772Z</updated>
   <id>http://chenj102.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://chenj102.github.io/2022/07/22/leetcode/"/>
     <id>http://chenj102.github.io/2022/07/22/leetcode/</id>
     <published>2022-07-21T16:00:00.000Z</published>
-    <updated>2022-07-22T09:28:06.090Z</updated>
+    <updated>2022-07-22T12:53:53.772Z</updated>
     
-    <content type="html"><![CDATA[<p> 今日起记录刷题啦！</p>]]></content>
+    <content type="html"><![CDATA[<p> 今日起记录刷题啦！</p><h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="一、理论知识"><a href="#一、理论知识" class="headerlink" title="一、理论知识"></a>一、理论知识</h2><h3 id="1-种类"><a href="#1-种类" class="headerlink" title="1.种类"></a>1.种类</h3><p>满二叉树：结点的度只有0和2，为0的结点都在同一层。深度为k，结点数为2^k-1。</p><p>完全二叉树：只有最底层结点没填满，且最底层的结点都在最左边。若最底层为第h层，则该层为1~2^(h-1)个结点。</p><p>二叉搜索树：有序树。左 &lt; 根 &lt; 右。</p><p>平衡二叉搜索树：AVL，空树或左右子树高度差绝对值不超过1。</p><p>C++中map、set、multimap、multiset底层都为AVL。增删O(logn);</p><h3 id="2-存储方式"><a href="#2-存储方式" class="headerlink" title="2.存储方式"></a>2.存储方式</h3><p>链式存储：指针（常用），left和right指针</p><p>顺序存储：数组。父节点数组下标为i，左孩子为i * 2 + 1，右孩子为i * 2 + 2。</p><h3 id="3-遍历方式"><a href="#3-遍历方式" class="headerlink" title="3.遍历方式"></a>3.遍历方式</h3><h4 id="深度遍历：（递归法、迭代法）"><a href="#深度遍历：（递归法、迭代法）" class="headerlink" title="深度遍历：（递归法、迭代法）"></a>深度遍历：（递归法、迭代法）</h4><p>前序遍历：根左右</p><p>中序遍历：左根右</p><p>后序遍历：左右根</p><h4 id="广度遍历：（迭代法）"><a href="#广度遍历：（迭代法）" class="headerlink" title="广度遍历：（迭代法）"></a>广度遍历：（迭代法）</h4><p>层次遍历：实现一般使用队列</p><p><img src="/2022/07/22/leetcode/myBlog/source_posts\leetcode\image-20220722205321315.png" alt="image-20220722205321315"></p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt; 今日起记录刷题啦！&lt;/p&gt;
-</summary>
+&lt;h1 id=&quot;二叉树&quot;&gt;&lt;a href=&quot;#二叉树&quot; class=&quot;headerlink&quot; title=&quot;二叉树&quot;&gt;&lt;/a&gt;二叉树&lt;/h1&gt;&lt;h2 id=&quot;一、理论知识&quot;&gt;&lt;a href=&quot;#一、理论知识&quot; class=&quot;headerlink</summary>
       
     
     
