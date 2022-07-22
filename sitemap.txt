@@ -1,3 +1,4 @@
+http://chenj102.github.io/2022/07/22/Leetcode-Note/
 http://chenj102.github.io/2022/07/22/Leetcode/
 http://chenj102.github.io/2022/07/22/test/
 http://chenj102.github.io/about/index.html
