@@ -18,10 +18,10 @@
 <meta property="og:description" content="前言： 本篇为Vue3t的一些新特性学习~">
 <meta property="og:locale">
 <meta property="og:image" content="https://user-images.githubusercontent.com/499550/93624428-53932780-f9ae-11ea-8d16-af949e16a09f.png">
-<meta property="og:image" content="http://chenj102.github.io/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image-20220912200011475.png">
-<meta property="og:image" content="http://chenj102.github.io/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image-20220912200214237.png">
-<meta property="og:image" content="http://chenj102.github.io/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image_20220912200222216.png">
-<meta property="og:image" content="http://chenj102.github.io/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image_20220912203714238.png">
+<meta property="og:image" content="http://chenj102.github.io/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image-20220912200011475.png">
+<meta property="og:image" content="http://chenj102.github.io/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image-20220912200214237.png">
+<meta property="og:image" content="http://chenj102.github.io/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image_20220912200222216.png">
+<meta property="og:image" content="http://chenj102.github.io/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image_20220912203714238.png">
 <meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f84e4e2c02424d9a99862ade0a2e4114~tplv-k3u1fbpfcp-watermark.image">
 <meta property="og:image" content="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5ac7e20d1784887a826f6360768a368~tplv-k3u1fbpfcp-watermark.image">
 <meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc0be8211fc54b6c941c036791ba4efe~tplv-k3u1fbpfcp-watermark.image">
@@ -368,8 +368,8 @@
 <li><p>传统构建 与 vite构建对比图</p>
 </li>
 </ul>
-<p><img src="/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image-20220912200011475.png" alt="image-20220912200011475"></p>
-<p><img src="/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image-20220912200214237.png" alt="image-20220912200214237"></p>
+<p><img src="/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image-20220912200011475.png" alt="image-20220912200011475"></p>
+<p><img src="/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image-20220912200214237.png" alt="image-20220912200214237"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 创建工程</span></span><br><span class="line">npm init vite-app &lt;project-name&gt;</span><br><span class="line"><span class="comment">## 进入工程目录</span></span><br><span class="line"><span class="built_in">cd</span> &lt;project-name&gt;</span><br><span class="line"><span class="comment">## 安装依赖</span></span><br><span class="line">npm install</span><br><span class="line"><span class="comment">## 运行</span></span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
 
 <hr>
@@ -564,7 +564,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//watchEffect所指定的回调中用到的数据只要发生变化，则直接重新执行回调。</span></span><br><span class="line"><span class="title function_">watchEffect</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> x1 = sum.<span class="property">value</span></span><br><span class="line">    <span class="keyword">const</span> x2 = person.<span class="property">age</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;watchEffect配置的回调执行了&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <h2 id="8-生命周期"><a href="#8-生命周期" class="headerlink" title="8.生命周期"></a>8.生命周期</h2><p>vue3.0的生命周期</p>
-<p><img src="/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image_20220912200222216.png" alt="image_20220912200222216"></p>
+<p><img src="/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image_20220912200222216.png" alt="image_20220912200222216"></p>
 <p>Vue3.0中可以继续使用Vue2.x中的生命周期钩子，但有有两个被更名：</p>
 <ul>
 <li><p><code>beforeDestroy</code>改名为 <code>beforeUnmount</code></p>
@@ -666,7 +666,7 @@
 
 
 
-<h2 id="5-provide-与-inject"><a href="#5-provide-与-inject" class="headerlink" title="5.provide 与 inject"></a>5.provide 与 inject</h2><p><img src="/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image_20220912203714238.png" alt="image_20220912203714238"></p>
+<h2 id="5-provide-与-inject"><a href="#5-provide-与-inject" class="headerlink" title="5.provide 与 inject"></a>5.provide 与 inject</h2><p><img src="/2022/09/12/Vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/image_20220912203714238.png" alt="image_20220912203714238"></p>
 <ul>
 <li><p>作用：实现<strong style="color:#DD5145">祖与后代组件间</strong>通信</p>
 </li>
